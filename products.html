@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUCTS - 取扱商品と取扱メーカー | 有限会社ハッピーステイション</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['"Noto Sans JP"', 'sans-serif'] },
+                    colors: {
+                        stone: { 50: '#fafaf9', 100: '#f5f5f4', 800: '#292524', 900: '#1c1917' },
+                        brand: { light: '#f97316', DEFAULT: '#ea580c', dark: '#c2410c' }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-stone-50 text-stone-800 font-sans antialiased overflow-x-hidden">
+
+    <!-- 共通ヘッダー -->
+    <header class="fixed w-full top-0 z-50 bg-stone-50/90 backdrop-blur-md border-b border-stone-200 transition-all duration-300">
+        <div class="w-full px-6 lg:px-12">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center gap-3">
+                    <div class="w-2 h-8 bg-brand"></div>
+                    <span class="text-xl font-black tracking-tight text-stone-900">HAPPY STATION</span>
+                </a>
+                <nav class="hidden md:flex items-center space-x-12">
+                    <a href="index.html" class="text-stone-500 hover:text-stone-900 font-bold text-sm tracking-widest transition-colors">HOME</a>
+                    <a href="about.html" class="text-stone-500 hover:text-stone-900 font-bold text-sm tracking-widest transition-colors">ABOUT</a>
+                    <a href="products.html" class="text-stone-900 font-bold text-sm tracking-widest border-b-2 border-brand pb-1">PRODUCTS</a>
+                    <a href="news.html" class="text-stone-500 hover:text-stone-900 font-bold text-sm tracking-widest transition-colors">NEWS</a>
+                    <a href="contact.html" class="px-6 py-2.5 border-2 border-stone-900 text-stone-900 font-bold text-sm tracking-widest hover:bg-stone-900 hover:text-white transition-all">
+                        CONTACT
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- ヒーローセクション -->
+    <div class="relative pt-40 pb-24 px-6 lg:px-24 border-b border-stone-800 overflow-hidden bg-stone-900">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Products Hero" class="w-full h-full object-cover grayscale opacity-30 mix-blend-luminosity">
+            <div class="absolute inset-0 bg-gradient-to-r from-stone-900 via-stone-900/80 to-stone-900/40"></div>
+        </div>
+        <div class="relative z-10 text-white max-w-4xl slide-in-left">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-4">PRODUCTS</h1>
+            <p class="text-brand font-bold tracking-widest uppercase flex items-center gap-4">
+                <span class="w-12 h-[2px] bg-brand inline-block"></span>
+                取扱商品と取扱メーカー
+            </p>
+        </div>
+    </div>
+
+    <main>
+        <!-- Intro & カタログ案内 -->
+        <section class="py-24 max-w-5xl mx-auto px-6 text-center slide-in-up">
+            <p class="text-stone-600 leading-relaxed font-medium text-lg mb-8">
+                弊社でお取扱している商品の一例をご紹介します。<br>
+                店頭では常時100冊超のカタログや見本帳をご用意しています。ご自由にご覧頂けますので、是非ご来店下さい。
+            </p>
+        </section>
+
+        <!-- カテゴリナビゲーション (Sticky) -->
+        <div class="sticky top-20 z-40 bg-stone-50/90 backdrop-blur-md border-y border-stone-200 py-4 mb-24 slide-in-up">
+            <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-center gap-4 md:gap-8 text-sm font-bold tracking-widest">
+                <a href="#materials" class="text-stone-500 hover:text-brand transition-colors">01. 建築資材・金物・製品</a>
+                <a href="#tools" class="text-stone-500 hover:text-brand transition-colors">02. 電動工具・手工具</a>
+                <a href="#supplies" class="text-stone-500 hover:text-brand transition-colors">03. 塗料・現場用品・その他</a>
+            </div>
+        </div>
+
+        <!-- 01. 建築資材・金物・製品 -->
+        <section id="materials" class="pt-12 pb-32 max-w-7xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-16">
+                <!-- 左側：見出しエリア -->
+                <div class="lg:w-1/3 slide-in-left">
+                    <span class="text-stone-400 font-mono text-5xl font-black block mb-2 opacity-50">01</span>
+                    <h2 class="text-4xl md:text-5xl font-black text-stone-900 tracking-tight mb-6 leading-tight">建築資材<br>金物・コンクリ</h2>
+                    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="建築資材" class="w-full h-64 object-cover grayscale mt-8">
+                </div>
+                
+                <!-- 右側：リスト詳細 -->
+                <div class="lg:w-2/3 slide-in-right">
+                    <div class="border-t-2 border-stone-900">
+                        
+                        <!-- 建築資材 -->
+                        <div class="py-10 border-b border-stone-200">
+                            <h3 class="text-2xl font-black text-stone-900 mb-6 flex items-center gap-3">
+                                <span class="w-2 h-2 bg-brand inline-block"></span> 建築資材
+                            </h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <h4 class="font-bold text-stone-500 mb-2 border-b border-stone-200 pb-1 text-sm">建築部材</h4>
+                                    <p class="text-stone-800 leading-relaxed font-medium">コンパネ、塩ビ管、波板、雨とよ、他</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-stone-500 mb-2 border-b border-stone-200 pb-1 text-sm">養生材・工事補助製品</h4>
+                                    <p class="text-stone-800 leading-relaxed font-medium">プラベニア、パイオラン、ポリフィルム、エアーパッキン、床養生シート、テープ、ブルーシート、ホワイトシート、ネット、土のう袋、ガラ袋、ウエス、コーキング、他</p>
+                                </div>
+                                <div class="md:col-span-2 mt-4">
+                                    <h4 class="font-bold text-stone-500 mb-2 border-b border-stone-200 pb-1 text-sm">エクステリア製品</h4>
+                                    <p class="text-stone-800 leading-relaxed font-medium">門柱、門扉、フェンス、カーポート、物置、ゴミ置場（ダストピット）、デッキ材、バルコニー、ポスト、掲示板、グレーチング、マンホール、駐車場ポール、物干金物、インターロッキング、化粧ブロック、玉石、砂利、砂、セメント、コンクリ製品、他</p>
+                                    
+                                    <!-- ミニマルテーブル (メーカー) -->
+                                    <div class="mt-6 bg-white p-6 border border-stone-100 rounded">
+                                        <p class="text-xs font-bold text-brand uppercase tracking-widest mb-4">▼ 主な取扱メーカー</p>
+                                        <dl class="divide-y divide-stone-100 text-sm">
+                                            <div class="py-2 flex"><dt class="w-24 font-bold text-stone-500">物置</dt><dd class="flex-1 font-medium">イナバ物置・ヨド物置・ダイケン・その他</dd></div>
+                                            <div class="py-2 flex"><dt class="w-24 font-bold text-stone-500">フェンス・門扉</dt><dd class="flex-1 font-medium">トーヨーエクステリア・四国化成・三協アルミ・ナショナル・タカショー・その他</dd></div>
+                                            <div class="py-2 flex"><dt class="w-24 font-bold text-stone-500">ブロック</dt><dd class="flex-1 font-medium">町田産業・新生産業・その他</dd></div>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 建築金物 -->
+                        <div class="py-10 border-b border-stone-200">
+                            <h3 class="text-2xl font-black text-stone-900 mb-6 flex items-center gap-3">
+                                <span class="w-2 h-2 bg-brand inline-block"></span> 建築金物
+                            </h3>
+                            <p class="text-stone-800 leading-relaxed font-medium mb-6">
+                                釘/ビス、羽子板、換気金物、ビル金物、鉄筋、ワイヤーメッシュ、角パイプ、アングル、釘、ビス、ネジ、丁番、針金、パンチングメタル、差筋アンカー、全ネジ、合いカギ、錠、ドアノブ、カーテンレール、ステンパイプ、ステンワイヤー、キャスター、防塵金物、ポスト、点検口、他
+                            </p>
+                            <!-- ミニマルテーブル (メーカー) -->
+                            <div class="bg-white p-6 border border-stone-100 rounded">
+                                <p class="text-xs font-bold text-brand uppercase tracking-widest mb-4">▼ 主な取扱メーカー</p>
+                                <dl class="divide-y divide-stone-100 text-sm">
+                                    <div class="py-2 flex"><dt class="w-24 font-bold text-stone-500">カギ</dt><dd class="flex-1 font-medium">美和ロック・ゴール・フキ・川口技研・アルファ・その他</dd></div>
+                                    <div class="py-2 flex"><dt class="w-24 font-bold text-stone-500">アンカー</dt><dd class="flex-1 font-medium">ロブテックス・旭化成ケミカル・その他</dd></div>
+                                </dl>
+                            </div>
+                        </div>
+
+                        <!-- コンクリ製品 -->
+                        <div class="py-10 border-b border-stone-200">
+                            <h3 class="text-2xl font-black text-stone-900 mb-6 flex items-center gap-3">
+                                <span class="w-2 h-2 bg-brand inline-block"></span> コンクリ製品
+                            </h3>
+                            <p class="text-stone-800 leading-relaxed font-medium">
+                                ブロック/レンガ、エアコン用土台、砂利・砂・セメント、タイル
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02. 電動工具・工具 (ダークテーマで力強さを演出) -->
+        <section id="tools" class="pt-32 pb-32 bg-stone-900 text-white border-y border-stone-800">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex flex-col lg:flex-row gap-16">
+                    <div class="lg:w-1/3 slide-in-left">
+                        <span class="text-stone-700 font-mono text-5xl font-black block mb-2">02</span>
+                        <h2 class="text-4xl md:text-5xl font-black text-white tracking-tight mb-6 leading-tight">電動工具<br>手工具</h2>
+                        <img src="https://images.unsplash.com/photo-1572981779307-38b8cabb2407?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="工具" class="w-full h-64 object-cover grayscale mt-8">
+                    </div>
+                    
+                    <div class="lg:w-2/3 slide-in-right">
+                        <div class="border-t-2 border-white">
+                            
+                            <!-- 電動工具 -->
+                            <div class="py-10 border-b border-stone-700">
+                                <h3 class="text-2xl font-black text-white mb-6 flex items-center gap-3">
+                                    <span class="w-2 h-2 bg-brand inline-block"></span> 電動工具
+                                </h3>
+                                <p class="text-stone-300 leading-relaxed mb-6 font-medium">
+                                    インパクトドライバー、ハンマードリル、ディスクグラインダー、スライド丸ノコ、発電機、掃除機、オートレベル、先端工具（ビット、ダイヤモンドカッター）他
+                                </p>
+                                <div class="bg-stone-800 p-6 border border-stone-700 rounded">
+                                    <p class="text-xs font-bold text-brand uppercase tracking-widest mb-4">▼ 主な取扱メーカー</p>
+                                    <p class="text-sm font-medium text-stone-200">
+                                        マキタ・HiKOKI（旧 日立工機）・パナソニック・ボッシュ・リョービ・マックス・その他
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- 工具（手工具） -->
+                            <div class="py-10 border-b border-stone-700">
+                                <h3 class="text-2xl font-black text-white mb-6 flex items-center gap-3">
+                                    <span class="w-2 h-2 bg-brand inline-block"></span> 工具
+                                </h3>
+                                <p class="text-stone-300 leading-relaxed mb-6 font-medium">
+                                    ペンチ、ニッパー、ドライバー、タガネ、ポンチ、スケール、溶接棒、計測器、左官コテ、トロ舟、他
+                                </p>
+                                <div class="bg-stone-800 p-6 border border-stone-700 rounded">
+                                    <p class="text-xs font-bold text-brand uppercase tracking-widest mb-4">▼ 主な取扱メーカー</p>
+                                    <dl class="divide-y divide-stone-700 text-sm">
+                                        <div class="py-2 flex"><dt class="w-24 font-bold text-stone-400">カッター</dt><dd class="flex-1 font-medium text-stone-200">ディスコ・ノリタケ・ツボ万・呉英製作所・ナニワ・バクマ・オルファ・タジマ・NTカッター・その他</dd></div>
+                                        <div class="py-2 flex"><dt class="w-24 font-bold text-stone-400">スケール</dt><dd class="flex-1 font-medium text-stone-200">タジマ・プロマート・KDS・シンワ・その他</dd></div>
+                                        <div class="py-2 flex"><dt class="w-24 font-bold text-stone-400">ノギス・水平器</dt><dd class="flex-1 font-medium text-stone-200">エビス・レベックス・シンワ・その他</dd></div>
+                                        <div class="py-2 flex"><dt class="w-24 font-bold text-stone-400">ペンチ</dt><dd class="flex-1 font-medium text-stone-200">フジヤ・TOP・アーム産業・MKK・スリーピークス技研・その他</dd></div>
+                                        <div class="py-2 flex"><dt class="w-24 font-bold text-stone-400">板切り・ハサミ</dt><dd class="flex-1 font-medium text-stone-200">近正・アルス・その他</dd></div>
+                                        <div class="py-2 flex"><dt class="w-24 font-bold text-stone-400">ショベル・カマ</dt><dd class="flex-1 font-medium text-stone-200">浅野木工所・その他</dd></div>
+                                    </dl>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03. 塗料・現場用品・その他 -->
+        <section id="supplies" class="pt-32 pb-32 max-w-7xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-16">
+                <!-- 左側：見出しエリア -->
+                <div class="lg:w-1/3 slide-in-left">
+                    <span class="text-stone-400 font-mono text-5xl font-black block mb-2 opacity-50">03</span>
+                    <h2 class="text-4xl md:text-5xl font-black text-stone-900 tracking-tight mb-6 leading-tight">塗料・接着剤<br>現場・生活用品</h2>
+                    <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="現場用品" class="w-full h-64 object-cover grayscale mt-8">
+                </div>
+                
+                <!-- 右側：リスト詳細 -->
+                <div class="lg:w-2/3 slide-in-right">
+                    <div class="border-t-2 border-stone-900">
+                        
+                        <!-- 現場用品 -->
+                        <div class="py-10 border-b border-stone-200">
+                            <h3 class="text-2xl font-black text-stone-900 mb-6 flex items-center gap-3">
+                                <span class="w-2 h-2 bg-brand inline-block"></span> 現場用品
+                            </h3>
+                            <p class="text-stone-800 leading-relaxed font-medium">
+                                スケール、腰袋、チョーク、ヘルメット、安全靴、作業服、長靴、軍手、ゴム手袋、革手袋、アスベスト用製品、防塵マスク、カッパ、安全標識、投光器、コードリール、アルミ脚立、ハシゴ、リヤカー、一輪車、掃除用品、ホース、ゴム製品、他
+                            </p>
+                        </div>
+
+                        <!-- 塗料 / 接着剤 -->
+                        <div class="py-10 border-b border-stone-200 grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <h3 class="text-2xl font-black text-stone-900 mb-4 flex items-center gap-3">
+                                    <span class="w-2 h-2 bg-brand inline-block"></span> 塗料
+                                </h3>
+                                <p class="text-stone-800 leading-relaxed font-medium">
+                                    水性/油性塗料、ラッカーうすめ液、下地剤、刷毛（ハケ）
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-black text-stone-900 mb-4 flex items-center gap-3">
+                                    <span class="w-2 h-2 bg-brand inline-block"></span> 接着剤・コーキング
+                                </h3>
+                                <p class="text-stone-800 leading-relaxed font-medium">
+                                    ボンド、セメダイン、床用/壁用、シリコン
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- その他 (生活密着) -->
+                        <div class="py-10 border-b border-stone-200">
+                            <h3 class="text-2xl font-black text-stone-900 mb-6 flex items-center gap-3">
+                                <span class="w-2 h-2 bg-brand inline-block"></span> その他（生活関連）
+                            </h3>
+                            <ul class="space-y-3 text-stone-800 font-medium">
+                                <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand"></i> 板橋区指定 ごみ処理券</li>
+                                <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand"></i> 東京都指定 ごみ収集袋</li>
+                                <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand"></i> 合いカギ</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 共通フッター -->
+    <footer class="bg-stone-900 text-stone-400 border-t border-stone-800 pt-20 pb-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                 <div class="lg:col-span-2">
+                    <h2 class="text-2xl font-black text-white tracking-tight mb-6 flex items-center gap-2">
+                        <div class="w-2 h-6 bg-brand"></div>
+                        HAPPY STATION
+                    </h2>
+                    <p class="leading-relaxed text-sm max-w-sm mb-6">
+                        東京都板橋区で創業50年。<br>建築資材・電動工具から合鍵作成まで、地域の現場と暮らしを支えます。
+                    </p>
+                    <p class="text-2xl text-white font-black font-mono">03-0000-0000</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6 tracking-widest border-b border-stone-700 pb-2">SITEMAP</h4>
+                    <ul class="space-y-4 text-sm font-medium">
+                        <li><a href="about.html" class="hover:text-brand transition-colors flex items-center"><i class="fa-solid fa-angle-right mr-2 text-stone-600"></i>ABOUT - 店舗案内</a></li>
+                        <li><a href="products.html" class="hover:text-brand transition-colors flex items-center"><i class="fa-solid fa-angle-right mr-2 text-stone-600"></i>PRODUCTS - 取扱商品</a></li>
+                        <li><a href="news.html" class="hover:text-brand transition-colors flex items-center"><i class="fa-solid fa-angle-right mr-2 text-stone-600"></i>NEWS - お知らせ</a></li>
+                        <li><a href="contact.html" class="hover:text-brand transition-colors flex items-center"><i class="fa-solid fa-angle-right mr-2 text-stone-600"></i>CONTACT - お問い合わせ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-stone-800 pt-8 flex justify-between items-center text-xs font-mono">
+                <p>&copy; 2026 Happy Station Co., Ltd.</p>
+                <a href="#" class="hover:text-white transition-colors">Back to top ↑</a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="main.js"></script>
+</body>
+</html>
