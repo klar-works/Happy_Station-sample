@@ -1,0 +1,63 @@
+/* style.css */
+
+/* Marquee (走るテキスト) アニメーション */
+@keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); } /* 半分移動したらループ */
+}
+
+.animate-marquee {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 20s linear infinite;
+    /* 幅を倍にしてシームレスループを担保 */
+    width: max-content;
+}
+
+/* スクロールバーのカスタマイズ (モダンでソリッドなデザイン) */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #fafaf9; /* stone-50 */
+}
+::-webkit-scrollbar-thumb {
+    background: #1c1917; /* stone-900 */
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #ea580c; /* brand */
+}
+
+/* ==========================================================
+   スクロール連動アニメーション (全ページ共通)
+   ========================================================== */
+
+/* 初期状態: 透過率0、横や下にずらしておく */
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.slide-in-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* 表示状態: JSによって付与されるクラス */
+.is-visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* アニメーション中のスクロールバー発生を防ぐ */
+body {
+    overflow-x: hidden;
+}
